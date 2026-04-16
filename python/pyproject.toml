@@ -6,6 +6,12 @@ members = [
     "global_fusion",
 ]
 
+[tool.uv.sources]
+vins-camera-models = { workspace = true }
+vins = { workspace = true }
+vins-loop-fusion = { workspace = true }
+vins-global-fusion = { workspace = true }
+
 [tool.uv]
 dev-dependencies = [
     "pytest>=8.0",
