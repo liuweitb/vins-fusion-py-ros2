@@ -17,39 +17,27 @@ The Python ROS2 workspace lives at the repository root and contains four package
 - Python 3.10+
 - `uv`
 
-Install `uv` if needed:
+Source ROS2:
 
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
+source /opt/ros/<ros2-distro>/setup.bash
 ```
-
-Source ROS2 before building or running:
-
-```bash
-source /opt/ros/jazzy/setup.bash
-```
-
-Use the ROS2 distro installed on your machine if it is not Jazzy.
 
 ## Install Python Dependencies
 
 From the repository root:
 
 ```bash
-uv sync --link-mode=copy
+uv sync
 ```
 
-`--link-mode=copy` avoids uv hardlink warnings when the uv cache and this workspace are on different filesystems.
-
 ## Build The ROS2 Python Packages
-
-From the repository root:
 
 ```bash
 colcon build --symlink-install
 ```
 
-Then source the overlay:
+Source the overlay:
 
 ```bash
 source install/setup.bash
@@ -121,17 +109,7 @@ It publishes:
 - `/global_fusion/odometry`
 - `/global_fusion/path`
 
-Topic names can be overridden with ROS parameters:
-
-```bash
-ros2 run vins_global_fusion global_fusion_node --ros-args \
-  -p gps_topic:=/gps \
-  -p vio_topic:=/vins_estimator/odometry \
-  -p global_odom_topic:=/global_fusion/odometry \
-  -p global_path_topic:=/global_fusion/path
-```
-
-## Play A ROS2 Bag
+## Play ROS2 Bags
 
 In a terminal with the ROS environment sourced:
 
@@ -145,7 +123,7 @@ For EuRoC-style data, make sure the bag topics match the config file, for exampl
 - `/cam0/image_raw`
 - `/cam1/image_raw`
 
-## Convert A ROS1 Bag
+## Convert ROS1 Bags
 
 If your dataset is still in ROS1 bag format:
 
@@ -158,16 +136,6 @@ Then play the converted ROS2 bag:
 
 ```bash
 ros2 bag play /path/to/output_ros2
-```
-
-## Run Without Colcon
-
-For quick Python-only checks, use uv from the repository root:
-
-```bash
-uv run vins_node config/euroc/euroc_stereo_imu_config.yaml
-uv run loop_fusion_node config/euroc/euroc_stereo_imu_config.yaml
-uv run global_fusion_node
 ```
 
 For normal ROS2 usage, prefer the `colcon build` and `ros2 run` workflow above.
