@@ -1,0 +1,8 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1776458522.615454670] [rosbag2_storage]: Opened database 'data/V2_01_easy_ros2/V2_01_easy_ros2.db3' for READ_ONLY.
+[INFO] [1776458522.615491540] [rosbag2_player]: Set rate to 1
+[INFO] [1776458522.952696717] [rosbag2_player]: Adding keyboard callbacks.
+[INFO] [1776458522.952771869] [rosbag2_player]: Press SPACE for Pause/Resume
+[INFO] [1776458522.952780505] [rosbag2_player]: Press CURSOR_RIGHT for Play Next Message
+[INFO] [1776458522.952786607] [rosbag2_player]: Press CURSOR_UP for Increase Rate 10%
+[INFO] [1776458522.952792217] [rosbag2_player]: Press CURSOR_DOWN for Decrease Rate 10%
+[INFO] [1776458522.953228794] [rosbag2_storage]: Opened database 'data/V2_01_easy_ros2/V2_01_easy_ros2.db3' for READ_ONLY.

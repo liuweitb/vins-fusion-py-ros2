@@ -1,0 +1,12 @@
+config_file: output/vicon_trajectories_mono/V2_03_difficult/with_loop/vins_config.yaml
+vocabulary_file/workspace/VINS-Fusion-ROS2-humble-arm/install/loop_fusion/share/loop_fusion/../support_files/brief_k10L6.bin
+loop start load vocabulary
+BRIEF_PATTERN_FILE/workspace/VINS-Fusion-ROS2-humble-arm/install/loop_fusion/share/loop_fusion/../support_files/brief_pattern.yml
+cam calib path: output/vicon_trajectories_mono/V2_03_difficult/with_loop/cam0_mei.yaml
+VIO input, perfrom 4 DoF (x, y, z, yaw) pose graph optimization
+no previous pose graph
+optimize pose graph 
+optimize pose graph 
+optimize pose graph 
+[INFO] [1776459333.719917086] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+terminate called without an active exception
